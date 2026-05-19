@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Document</title>
+</head>
+<body>
+  
+</body>
+<script>
+  /*
+  function sayHi(){
+    alert("Hello");
+  }
+
+  let func = sayHi;
+
+  func();
+  sayHi();
+*/
+
+/*
+let sayHi = function(){
+  alert('Hello')
+}
+let func = sayHi;
+*/
+
+
+/*
+function ask (question, yes, no){
+  if (confirm(question)) yes()
+  else no();
+}
+
+function showOk(){
+  alert ("you agreed")
+}
+function showCancel(){
+  alert ("you cancelled")
+}
+// showOk and showCancel are callback functions or callbacks
+// showOk is the callback for yes - showCancel for no
+ask ("Do you agree?", showOk, showCancel)
+*/
+
+
+
+/*
+function ask (question, yes, no){
+  if(confirm(question)) yes()
+  else no();
+}
+
+ask (
+  "Do you agree?",
+  function() {alert("you agreed")},
+  function {alert("cancelled")}
+); // function () goes inside the function ask
+    // if there was no function (), alert would run first and mess up the order
+*/ 
+
+
+/*
+sayHi("John"); // error!
+
+let sayHi = function(name) {  // (*) no magic any more
+  alert( `Hello, ${name}` );
+};
+ // part of initializing stage. When JS prepares to run the script, it looks for global function declarations first
+// function expressions wouldn't work in this example as it only runs when code reaches ot 
+// if sayHi("John") was placed below it would run
+
+sayHi ("John");
+function sayHi(name){
+  alert(`Hello ${name}`)
+} // this works 
+
+*/ 
+
+// 1 
+/*
+function sayHi(){
+  alert('Hi')
+}
+sayHi(); 
+*/
+// 2
+/*
+let sayHi = function(){
+  alert('Hi')
+}
+sayHi();
+*/ 
+// 3
+/*
+welcome();
+
+function welcome (){
+  alert('welcome!')
+}*/
+
+//4 
+/*
+function double (num){
+  return (2 * num)
+}
+
+let timesTwo = double; // not in parantheses because it would run the function
+
+console.log(timesTwo(4));
+*/
+
+
+//5 
+/*
+let greeting = function(){alert('Hi there')};
+
+greeting();
+
+*/ 
+//6
+/*
+let age = 15; 
+let message;  
+
+if (age > 18){
+   message = function(){alert('welcome!')}
+}
+else {
+   message = function(){alert('Welcome!')}};
+
+   message();*/ 
+
+//1 
+/*
+function add(a, b){
+ return a + b
+}
+console.log(add(1, 5));
+
+function max (a, b){
+  return Math.max(a,b)
+}
+console.log(max(2, 90));
+
+
+function isEven(num){
+   return num % 2 === 0 
+}
+console.log(isEven(4));
+console.log(isEven(3));
+
+
+function capital (name){
+  return name.charAt(0).toUpperCase() + name.slice(1)}
+
+console.log(capital('john'))
+
+
+function reverseString(word){
+  return [...word].reverse().join('');
+}
+console.log(reverseString('cat'))
+
+function checkPassword(password){
+ return password == "odin123" ? alert('access granted') : alert('access denied')
+}
+checkPassword("odin123")
+
+function toCelsius (F){
+    return (F - 32) * 5 / 9
+}
+console.log(toCelsius(100))
+
+function playRound(player, computer){
+  player === 'rock' && computer === 'scissors' ? return ('player wins') :
+  player === 'scissors' && computer === 'paper' ? return ('player wins') : 
+  player === 'paper' && computer === 'rock' ? return ('player wins') : 
+  player == computer ? return ('Tie') : 
+  return ('Computer Wins')
+}
+
+console.log(playRound('scissors', 'paper'))
+*/
+/*
+function playRound(player, computer) {
+  if (player === computer) {
+    return "Tie";
+  }
+
+  if (
+    (player === "rock" && computer === "scissors") ||
+    (player === "scissors" && computer === "paper") ||
+    (player === "paper" && computer === "rock")
+  ) {
+    return "Player wins";
+  }
+
+  return "Computer wins";
+}
+console.log(playRound("rock", "paper")) */ 
+/*
+function square (number){
+  return (number * number)
+}
+console.log(square(4))
+
+function double (num){
+  return (num * 2)
+}
+console.log(double(3))
+
+function doubleAndAlert(num){
+  alert(num * 2)
+}
+doubleAndAlert(2);
+
+function add (a, b){
+  return a + b
+}
+console.log(add(2,4))
+
+function makeUsername(first, last){
+  return first.charAt(0).toLowerCase() + first.slice(1) + '_' + 
+   last.charAt(0).toLowerCase() + last.slice(1)
+}
+console.log(makeUsername('John', 'Brown'))
+
+
+function divide(a, b){
+  return b === 0 ? "cannot divide by zero" : (a / b)
+}
+
+console.log(divide(5, 5))
+
+function logResult(value){
+  return value
+}
+console.log(logResult(1 + 5))
+
+function getCircleArea(radius){
+  return Math.PI * Math.pow(radius, 2)
+}
+console.log(getCircleArea(78.5))
+*/
+
+
+//sayHi(); function sayHi() {console.log("Hi");}
+// output - console.log will log Hi as it is a declaration function and the variable is hoisted
+
+// sayHi(); let sayHi = function() {console.log("Hi");};
+// output - console.log will have error as this is a function expression and the variable is hoisted and not recognized (anon function)
+
+// it is a functon expression 
+
+// x contains the function greet. "Hello is printed"
+
+// x is a variable that is stroing the function greet and prints "Hi"
+function greet(){
+  return 'Hi!'
+}
+let x = greet 
+console.log(x())
+
+// run runs let's (fn) run itself with fn now being the function sayHello
+
+// a  function is being passed into the function run - the parameter for console.log
+// done is a function expression.
+
+// the output that is printed is 5 * 2
+
+// action -> console.log"working" is stored in action, exeecute ->fn gets passed 
+// working gets printed
+
+function run(fn) {
+  fn();
+}
+
+function sayHello() {
+  console.log("Hello");
+}
+
+run(sayHello);
+
+
+
+
+</script>
+</html>

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Document</title>
+</head>
+<body>
+  
+</body>
+<script>
+  function favoriteAnimal(animal){
+    return animal + " is my favorite animal"
+  } // (animal) is the parameter name //favoriteAnimal is the function decalartion
+  // return is the code of the function
+const message = favoriteAnimal('goat') // calling the function - goat is the argument
+let message2 = favoriteAnimal ('pineapple')
+console.log(message);
+console.log(message2);
+console.log(favoriteAnimal('fox mccloud'));
+/*
+confirm("what is the built in function question?")*/
+/*
+function showMessage(){
+  alert('Fox McCloud is my goat')
+} // alert is the function body
+
+showMessage();
+*//*
+function showMessage(){
+  let message = "Hello, I'm Fox McCloud"
+
+  alert (message);
+}
+showMessage();
+
+let userName = "Fox McCloud"
+
+function showGoat(){
+  alert (userName + " is an S Tier character")
+}
+showGoat();*/
+/*
+let userName = "Fox"
+
+function showMessage (){
+   userName = "Falco"
+  let message = 'Hello ' + userName
+  alert (message)
+}
+alert(userName);
+showMessage();
+alert(userName); */ 
+
+/*
+let userName = "Fox"
+
+function showMessage(){
+  let userName = "Falco"
+  let message = userName + ", an S Tier Character"
+
+  alert (message);
+}
+alert(userName);
+showMessage();
+alert(userName); */
+/*
+function showMessage (from, text){
+  alert (from + ":" + text)
+}
+showMessage('Fox', ' the goat')
+showMessage('Falco', ' 2nd place') */ 
+/*
+function showMessage (from, text = "no text given"){ // use this when wanting to call if something is omitted
+  from = '*' + from + '*';
+  alert (from + ": " + text);
+}
+let from = "Ann";
+showMessage(from, "Hello");
+showMessage(from);
+
+function showCount (count){
+  alert (count ?? "unknown") // old code
+}
+
+showCount();*/ // old code
+/*
+function errorMsg(error){
+  alert(error + " is melee")
+  error = error || " undefined"
+}
+
+errorMsg('goat game');*/
+/*
+function sum (a, b){
+  return a + b
+}
+console.log(sum(1, 2));
+
+
+
+
+
+
+
+function checkAge (age){
+  if (age >= 18){
+    return true;
+  } else {
+    return confirm('Do you have permission?')
+  }
+}
+console.log(checkAge(20));
+
+function showMovie (age){
+  if (!checkAge(age))// only works when returns a boolean which is confirm()
+  {
+    return;
+  }
+  alert ('showing you movie')
+}
+showMovie(20);*/ 
+/*
+function checkAge(age){
+  return (age > 18) || confirm ('did your parents lowe dat')
+}
+checkAge(2)
+
+function checkAge(age){
+   return age > 18 ? true : confirm('did your parents allow you?')
+}
+checkAge(2);
+
+*/
+/*
+function min (a, b){
+  return Math.min(a, b)
+}
+console.log(min (2, 5))*/
+
+const myText = "I am a string"
+const newString = myText.replace ("string", "sausage")
+console.log(newString);
+
+
+const myArray = ["Fox", "Is", "The", "GOAT"]
+const madeAString = myArray.join("")
+console.log(madeAString);
+
+function hello (name = "Chris"){ // chris is default value
+  console.log(`Hello ${name}`)
+}
+hello("Ari")
+
+
+</script>
+</html>
